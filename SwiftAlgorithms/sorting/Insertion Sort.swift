@@ -7,3 +7,6 @@
 
 import Foundation
 
+func insertionSort(data: inout (Int)){
+    
+}
