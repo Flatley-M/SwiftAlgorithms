@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71AC2002AFA4E4500AAD57A /* Quick Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AC1FF2AFA4E4500AAD57A /* Quick Sort.swift */; };
 		A7C46C102AF55C4800E7942D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C46C0F2AF55C4800E7942D /* main.swift */; };
 		A7C632702AF3D77600C4BC3E /* Linear Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C6326F2AF3D77600C4BC3E /* Linear Search.swift */; };
 		A7C632732AF3D7BE00C4BC3E /* Insertion Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C632722AF3D7BE00C4BC3E /* Insertion Sort.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A71AC1FF2AFA4E4500AAD57A /* Quick Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quick Sort.swift"; sourceTree = "<group>"; };
 		A7C46C0F2AF55C4800E7942D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A7C632652AF3D72E00C4BC3E /* SwiftAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C6326F2AF3D77600C4BC3E /* Linear Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Linear Search.swift"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A7C632722AF3D7BE00C4BC3E /* Insertion Sort.swift */,
+				A71AC1FF2AFA4E4500AAD57A /* Quick Sort.swift */,
 			);
 			path = sorting;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71AC2002AFA4E4500AAD57A /* Quick Sort.swift in Sources */,
 				A7C632732AF3D7BE00C4BC3E /* Insertion Sort.swift in Sources */,
 				A7C632702AF3D77600C4BC3E /* Linear Search.swift in Sources */,
 				A7C46C102AF55C4800E7942D /* main.swift in Sources */,
