@@ -25,10 +25,16 @@ func quickSort(data: inout [Int]){
                 right.append(item)
             }
         }
+        
+        quickSort(data: &left)
+        quickSort(data: &right)
+        
         var newData: [Int] = [Int]()
         newData.append(contentsOf: left)
         newData.append(pivot)
         newData.append(contentsOf: right)
+        
+        data = newData
         
     }
 }
