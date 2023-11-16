@@ -22,109 +22,110 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         //ASSERT
         XCTAssertEqual(expected, actual)
         
-        func testLinearSearchWithNumberInSmallArrayReturnsTrue(){
+    }
+        
+    func testLinearSearchWithNumberInSmallArrayReturnsTrue(){
             
-            //ARRANGE
-            let sut = Algorithm()
-            let expected = true
-            let searchData = [1]
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = true
+        let searchData = [1]
             
-            //ACT
-            let actual = sut.linearSearch(data: searchData, search: 1)
+        //ACT
+        let actual = sut.linearSearch(data: searchData, search: 1)
             
-            //ASSERT
-            XCTAssertEqual(expected,actual)
-        }
+        //ASSERT
+        XCTAssertEqual(expected,actual)
+    }
     
             
-        func testBubbleSortWithEmptyArrayReturnsArray(){
+    func testBubbleSortWithEmptyArrayReturnsArray(){
                 
-            //ARRANGE
-            let sut = Algorithm()
-            let expected = [Int]()
-            var sortData = [Int]()
-            sut.bubbleSort(data: &sortData)
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = [Int]()
+        var sortData = [Int]()
+        sut.bubbleSort(data: &sortData)
                 
-            //ACT
-            let actual = sortData
+        //ACT
+        let actual = sortData
                 
-            //ASSERT
-            XCTAssertEqual(expected, actual)
-        }
-        
-        func testBubbleSortWithSortedArrayReturnsArray(){
-            
-            //ARRANGE
-            let sut = Algorithm()
-            let expected = [1,2,3,4]
-            var sortData = [1,2,3,4]
-            sut.bubbleSort(data: &sortData)
-            
-            //ACT
-            let actual = sortData
-            
-            //ASSERT
-            XCTAssertEqual(expected, actual)
-        }
-        
-        func testBubbleSortWithUnsortedArrayReturnsSortedArray(){
-            
-            //ARRANGE
-            let sut = Algorithm()
-            var sortData = [3,5,2,4,1]
-            let expected = [1,2,3,4,5]
-            sut.bubbleSort(data: &sortData)
-            
-            //ACT
-            let actual = sortData
-            
-            //ASSERT
-            XCTAssertEqual(expected, actual)
-        }
-        
-        func testMergeSortWithEmptyArrayReturnsArray(){
-            
-            //ARRANGE
-            let sut = Algorithm()
-            let expected = [Int]()
-            var sortData = [Int]()
-            sut.mergeSort(data: &sortData)
-            
-            //ACT
-            let actual = sortData
-            
-            //ASSERT
-            XCTAssertEqual(expected, actual)
-        }
-        
-        func testMergeSortWithSortedArrayReturnsArray(){
-            
-            //ARRANGE
-            let sut = Algorithm()
-            let expected = [1,2,3,4]
-            var sortData = [1,2,3,4]
-            sut.bubbleSort(data: &sortData)
-            
-            //ACT
-            let actual = sortData
-            
-            //ASSERT
-            XCTAssertEqual(expected, actual)
-        }
-        
-        func testMergeSortWithUnsortedArrayReturnsSortedArray(){
-            
-            //ARRANGE
-            let sut = Algorithm()
-            var sortData = [3,5,2,4,1]
-            let expected = [1,2,3,4,5]
-            sut.bubbleSort(data: &sortData)
-            
-            //ACT
-            let actual = sortData
-            
-            //ASSERT
-            XCTAssertEqual(expected, actual)
-        }
+        //ASSERT
+        XCTAssertEqual(expected, actual)
     }
+        
+    func testBubbleSortWithSortedArrayReturnsArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = [1,2,3,4]
+        var sortData = [1,2,3,4]
+        sut.bubbleSort(data: &sortData)
+            
+        //ACT
+        let actual = sortData
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+    }
+        
+    func testBubbleSortWithUnsortedArrayReturnsSortedArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        var sortData = [3,5,2,4,1]
+        let expected = [1,2,3,4,5]
+        sut.bubbleSort(data: &sortData)
+            
+        //ACT
+        let actual = sortData
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+    }
+        
+    func testMergeSortWithEmptyArrayReturnsArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = [Int]()
+        var sortData = [Int]()
+        sut.mergeSort(data: &sortData)
+            
+        //ACT
+        let actual = sortData
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+    }
+        
+    func testMergeSortWithSortedArrayReturnsArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = [1,2,3,4]
+        var sortData = [1,2,3,4]
+        sut.mergeSort(data: &sortData)
+            
+        //ACT
+        let actual = sortData
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+    }
+        
+    func testMergeSortWithUnsortedArrayReturnsSortedArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        var sortData = [3,5,2,4,1]
+        let expected = [1,2,3,4,5]
+        sut.mergeSort(data: &sortData)
+            
+        //ACT
+        let actual = sortData
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+        }
 }
