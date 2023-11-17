@@ -90,10 +90,9 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         let sut = Algorithm()
         let expected = [Int]()
         var sortData = [Int]()
-        sut.mergeSort(data: &sortData)
             
         //ACT
-        let actual = sortData
+        let actual = sut.mergeSort(data: sortData)
             
         //ASSERT
         XCTAssertEqual(expected, actual)
@@ -105,10 +104,9 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         let sut = Algorithm()
         let expected = [1,2,3,4]
         var sortData = [1,2,3,4]
-        sut.mergeSort(data: &sortData)
             
         //ACT
-        let actual = sortData
+        let actual = sut.mergeSort(data: sortData)
             
         //ASSERT
         XCTAssertEqual(expected, actual)
@@ -120,10 +118,9 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         let sut = Algorithm()
         var sortData = [3,5,2,4,1]
         let expected = [1,2,3,4,5]
-        sut.mergeSort(data: &sortData)
             
         //ACT
-        let actual = sortData
+        let actual = sut.mergeSort(data: sortData)
             
         //ASSERT
         XCTAssertEqual(expected, actual)

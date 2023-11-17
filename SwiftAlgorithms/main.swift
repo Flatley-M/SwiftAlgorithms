@@ -21,7 +21,7 @@ let start = CFAbsoluteTimeGetCurrent()
 //linearSearch(num: num)
 
 //quickSort(data: &array)
-sut.mergeSort(data: &array)
+//sut.mergeSort(data: &array)
 
 let diff = CFAbsoluteTimeGetCurrent() - start
 

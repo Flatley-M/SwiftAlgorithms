@@ -33,31 +33,51 @@ class Algorithm {
         }
     }
     
-    func mergeSort(data: inout [Int]){
+    func mergeSort(data: [Int]) -> [Int] {
         if data.count <= 1 {
             
         } else {
+            var left = [Int]()
+            var right = [Int]()
             
+            for i in 0 ..< data.count {
+                if i <= (data.count/2) {
+                    left.append(data[i])
+                } else {
+                    right.append(data[i])
+                }
+            }
         }
+        return [Int]()
     }
+    
     
     func merge(left: [Int], right: [Int]) -> [Int] {
         var leftPointer = 0
         var rightPointer = 0
         var newList = [Int]()
         
-        while (leftPointer <= left.count) && (rightPointer <= right.count) {
+        while (leftPointer < left.count) && (rightPointer < right.count) {
             
-            if left[leftPointer] > right[rightPointer] {
+            if left[leftPointer] < right[rightPointer] {
                 newList.append(left[leftPointer])
                 leftPointer += 1
-                
-            } else {
+            }
+            else {
                 newList.append(right[rightPointer])
                 rightPointer += 1
             }
         }
         
+        while (leftPointer < left.count) || (rightPointer < right.count) {
+            if leftPointer < left.count {
+                newList.append(left[leftPointer])
+                leftPointer += 1
+            } else {
+                newList.append(right[rightPointer])
+                rightPointer += 1
+            }
+        }
         
         
         return newList
