@@ -89,7 +89,7 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         //ARRANGE
         let sut = Algorithm()
         let expected = [Int]()
-        var sortData = [Int]()
+        let sortData = [Int]()
             
         //ACT
         let actual = sut.mergeSort(data: sortData)
@@ -103,7 +103,7 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         //ARRANGE
         let sut = Algorithm()
         let expected = [1,2,3,4]
-        var sortData = [1,2,3,4]
+        let sortData = [1,2,3,4]
             
         //ACT
         let actual = sut.mergeSort(data: sortData)
@@ -116,11 +116,53 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
             
         //ARRANGE
         let sut = Algorithm()
-        var sortData = [3,5,2,4,1]
+        let sortData = [3,5,2,4,1]
         let expected = [1,2,3,4,5]
             
         //ACT
         let actual = sut.mergeSort(data: sortData)
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+        }
+    
+    func testQuickSortWithEmptyArrayReturnsArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = [Int]()
+        let sortData = [Int]()
+            
+        //ACT
+        let actual = sut.quickSort(data: sortData)
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+    }
+        
+    func testQuickSortWithSortedArrayReturnsArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        let expected = [1,2,3,4]
+        let sortData = [1,2,3,4]
+            
+        //ACT
+        let actual = sut.quickSort(data: sortData)
+            
+        //ASSERT
+        XCTAssertEqual(expected, actual)
+    }
+        
+    func testQuickSortWithUnsortedArrayReturnsSortedArray(){
+            
+        //ARRANGE
+        let sut = Algorithm()
+        let sortData = [3,5,2,4,1]
+        let expected = [1,2,3,4,5]
+            
+        //ACT
+        let actual = sut.quickSort(data: sortData)
             
         //ASSERT
         XCTAssertEqual(expected, actual)

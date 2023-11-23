@@ -35,20 +35,14 @@ class Algorithm {
     
     func mergeSort(data: [Int]) -> [Int] {
         if data.count <= 1 {
-            
+            return data
         } else {
-            var left = [Int]()
-            var right = [Int]()
+            let midPoint = data.count / 2
             
-            for i in 0 ..< data.count {
-                if i <= (data.count/2) {
-                    left.append(data[i])
-                } else {
-                    right.append(data[i])
-                }
-            }
+            let left = mergeSort(data: Array(data[0..<midPoint]))
+            let right = mergeSort(data: Array(data[midPoint..<data.count]))
+            return merge(left: left, right: right)
         }
-        return [Int]()
     }
     
     
@@ -63,23 +57,56 @@ class Algorithm {
                 newList.append(left[leftPointer])
                 leftPointer += 1
             }
-            else {
+            else if left[leftPointer] > right[rightPointer] {
                 newList.append(right[rightPointer])
                 rightPointer += 1
-            }
-        }
-        
-        while (leftPointer < left.count) || (rightPointer < right.count) {
-            if leftPointer < left.count {
+            } else {
                 newList.append(left[leftPointer])
                 leftPointer += 1
-            } else {
                 newList.append(right[rightPointer])
                 rightPointer += 1
             }
         }
-        
+        while leftPointer < left.count {
+            newList.append(left[leftPointer])
+            leftPointer += 1
+        }
+        while rightPointer < right.count {
+            newList.append(right[rightPointer])
+            rightPointer += 1
+        }
         
         return newList
+    }
+    
+    func quickSort(data: inout [Int]){
+        if data.count <= 1 {
+            
+        } else{
+            let pivot = data[0]
+            
+            var left = [Int]()
+            var right = [Int]()
+            
+            for i in 1..<data.count {
+                let item = data[i]
+                
+                if item < pivot {
+                    left.append(item)
+                } else {
+                    right.append(item)
+                }
+            }
+            
+            quickSort(data: &left)
+            quickSort(data: &right)
+            
+            var newData: [Int] = [Int]()
+            newData.append(contentsOf: left)
+            newData.append(pivot)
+            newData.append(contentsOf: right)
+            
+            data = newData
+        }
     }
 }
