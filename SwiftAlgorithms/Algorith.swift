@@ -9,6 +9,10 @@ import Foundation
 
 class Algorithm {
     
+    // SEARCHING //
+    
+    // Linear Search //
+    
     func linearSearch(data: [Int], search: Int) -> Bool {
         var found = false
         for i in data {
@@ -19,6 +23,30 @@ class Algorithm {
         return found
     }
     
+    func binarySearch(data: [Int], search: Int) -> Bool {
+        var found = false
+        let middle = data.count / 2
+        if data.count >= 1 || data[middle] == search{
+            if data[middle] > search {
+                if binarySearch(data: Array(data[0..<middle]), search: search) == true {
+                    found = true
+                }
+                
+            } else if data[middle] < search {
+                if binarySearch(data: Array(data[middle..<data.count]), search: search) == true {
+                    found = true
+                }
+            } else {
+                found = true
+            }
+        }
+        return found
+    }
+    
+    
+    // SORTING //
+    
+    // Bubble Sort //
     
     func bubbleSort(data: inout [Int]) {
         for _ in 0 ..< data.count {
@@ -32,6 +60,8 @@ class Algorithm {
             }
         }
     }
+    
+    // Merge Sort //
     
     func mergeSort(data: [Int]) -> [Int] {
         if data.count <= 1 {
@@ -79,6 +109,8 @@ class Algorithm {
         return newList
     }
     
+    // Quick Sort //
+    
     func quickSort(data: inout [Int]){
         if data.count <= 1 {
             
@@ -109,4 +141,22 @@ class Algorithm {
             data = newData
         }
     }
+    
+    // Insertion Sort //
+    
+    func insertionSort(data: inout [Int]){
+        var holding = 0
+        if data.count >= 1 {
+            for i in 1..<data.count {
+                var index = i
+                while index > 0 && data[index] < data[index-1] {
+                    holding = data[index-1]
+                    data[index-1] = data[index]
+                    data[index] = holding
+                    index -= 1
+                }
+            }
+        }
+    }
+    
 }
